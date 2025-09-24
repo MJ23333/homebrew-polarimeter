@@ -77,7 +77,7 @@ class Polarimeter < Formula
     EOS
   end
   Pathname.new("target").rmtree
-  ln_sf prefix/"#{app_name}.app", "/Applications/#{app_name}.app"
+  ln_sf app_path, "/Applications/#{app_name}.app"
   # --- (4) 安装后提示 ---
   # 这是最重要的部分，它会在安装成功后显示给用户，告诉他们下一步该怎么做。
   def caveats
