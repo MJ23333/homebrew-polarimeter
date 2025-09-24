@@ -6,8 +6,8 @@ class Polarimeter < Formula
   # --- (1) 基本信息 ---
   desc "一款基于 Rust 的偏振计图形界面应用"
   homepage "https://github.com/MJ23333/Rust-Polarimeter" # 替换成您的项目主页
-  url "https://github.com/MJ23333/Rust-Polarimeter/archive/refs/tags/%E6%B5%8B%E8%AF%955.tar.gz" # 替换成您的 release 压缩包 URL
-  sha256 "5e2eda7d908dc4768f1f7e6efa60cdb1fd92eb443ecd4df0f32d530966c7302" # 替换成压缩包的 SHA256
+  url "https://github.com/MJ23333/Rust-Polarimeter/archive/refs/tags/test6.tar.gz" # 替换成您的 release 压缩包 URL
+  sha256 "34d92fa5b9ae2c44c93a1e6a64dfcaf3fad63203e6012f5984c88c8c156220b3" # 替换成压缩包的 SHA256
   version "0.0.1"
 
   # --- (2) 依赖项 ---
