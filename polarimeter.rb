@@ -76,7 +76,7 @@ class Polarimeter < Formula
       </plist>
     EOS
     rm_rf "target"
-    ln_sf app_path, "/Applications/#{app_name}.app"
+    # ln_sf app_path, "/Applications/#{app_name}.app"
   end
   
   # --- (4) 安装后提示 ---
@@ -85,8 +85,12 @@ class Polarimeter < Formula
     <<~EOS
       🎉 Polarimeter 安装完成！
 
-      您现在可以在“应用程序”(Applications)文件夹中找到它。
-      也可以通过“启动台”(Launchpad)来打开它，就像其他普通应用一样。
+      要将它添加到您的“应用程序”(Applications)文件夹中以便于访问，
+      请在终端中运行以下命令：
+
+        ln -s '#{prefix}/Polarimeter.app' /Applications/
+
+      之后，您就可以通过“启动台”(Launchpad)来打开它了。
     EOS
   end
 
