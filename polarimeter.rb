@@ -42,8 +42,8 @@ class Polarimeter < Formula
     # (新增) 步骤 4: 复制图标文件
     # 请确保您的项目源码的根目录有一个名为 assets 的文件夹，
     # 并且里面包含一个 icon.icns 文件。
-    if File.exist?("assets/icon.icns")
-      resources_path.install "assets/icon.icns"
+    if File.exist?("icons/icon.icns")
+      resources_path.install "icons/icon.icns"
     end
 
     # 步骤 5: 创建 Info.plist 配置文件
@@ -76,7 +76,7 @@ class Polarimeter < Formula
       </plist>
     EOS
   end
-
+  ln_sf opt_prefix/"#{app_name}.app", "/Applications/#{app_name}.app"
   # --- (4) 安装后提示 ---
   # 这是最重要的部分，它会在安装成功后显示给用户，告诉他们下一步该怎么做。
   def caveats
