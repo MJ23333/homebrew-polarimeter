@@ -6,9 +6,9 @@ class Polarimeter < Formula
   # --- (1) 基本信息 ---
   desc "一款基于 Rust 的偏振计图形界面应用"
   homepage "https://github.com/MJ23333/Rust-Polarimeter" # 替换成您的项目主页
-  url "https://github.com/MJ23333/Rust-Polarimeter/archive/refs/tags/test6.tar.gz" # 替换成您的 release 压缩包 URL
-  sha256 "34d92fa5b9ae2c44c93a1e6a64dfcaf3fad63203e6012f5984c88c8c156220b3" # 替换成压缩包的 SHA256
-  version "0.0.1"
+  url "https://github.com/MJ23333/Rust-Polarimeter/archive/refs/tags/test8.tar.gz" # 替换成您的 release 压缩包 URL
+  sha256 "f0b0498ab7ed7b325335181b4b057006a50e4b95bb1ff490a49d07b5cbb8b8d1" # 替换成压缩包的 SHA256
+  version "0.0.2"
 
   # --- (2) 依赖项 ---
   depends_on "rust" => :build
@@ -90,7 +90,7 @@ class Polarimeter < Formula
       要将它添加到您的“应用程序”(Applications)文件夹中以便于访问，
       请在终端中运行以下命令：
 
-        ln -s '#{prefix}/Polarimeter.app' /Applications/
+        ln -s '#{prefix}/Polarimeter.app' /Applications
 
       之后，您就可以通过“启动台”(Launchpad)来打开它了。
     EOS
