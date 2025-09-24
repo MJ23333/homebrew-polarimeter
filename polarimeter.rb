@@ -20,7 +20,10 @@ class Polarimeter < Formula
     app_name = "Polarimeter"
     executable_name = "rust_polarimeter_gui"
     camera_usage_description = "此应用需要访问摄像头以进行实时图像处理和分析。"
-
+    if OS.mac?
+      xcode_path = `xcode-select --print-path`.strip
+      ENV["DYLD_FALLBACK_LIBRARY_PATH"] = "#{xcode_path}/usr/lib/"
+    end
     # 步骤 1: 编译 Rust 应用
     system "cargo", "build", "--release", "--bin", executable_name
 
