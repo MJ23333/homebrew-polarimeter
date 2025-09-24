@@ -48,8 +48,9 @@ class Polarimeter < Formula
 
     # 步骤 5: 创建 Info.plist 配置文件
     # 这个文件告诉 macOS 应用的基本信息，比如名称、图标和需要的权限
-    info_plist_path.unlink if info_plist_path.exist?
+    
     info_plist_path = app_path/"Contents/Info.plist"
+    info_plist_path.unlink if info_plist_path.exist?
     info_plist_path.write <<~EOS
       <?xml version="1.0" encoding="UTF-8"?>
       <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
